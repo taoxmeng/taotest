@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
     <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="app.js"></script>
         <title>Vue 3 Basics</title>
     </head>
     <body>
+
+
+
+
+        <div ng-controller="MyFirstController">
+            {{name}}<br>
+            {{sayHello()}}<br>
+            <input type="text" ng-model="name"><br><br><br>
+        </div>
+
+
+
+
         <div id="app">
-           {{ greeting }} <input v-model="greeting" />
+           {{ greeting }} <br><input v-model="greeting" />
            <div>
            <button @click="isVisible=!isVisible">toggle</button>
         </div>
-           <div v-if="isVisible">
+        <div v-if="isVisible">
             {{guess}}<input v-model="guess" />
            </div>
         </div>
           
-        <script src="https://unpkg.com/vue@next"></script>
+        
         <script>
             Vue.createApp (
                 {
