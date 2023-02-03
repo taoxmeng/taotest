@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue 3 Basics</title>
+    </head>
+    <body>
+        <div id="app">
+           {{ greeting }} <input v-model="greeting" />
+           <div>
+           <button @click="isVisible=!isVisible">toggle</button>
+        </div>
+           <div v-if="isVisible">
+            {{guess}}<input v-model="guess" />
+           </div>
+        </div>
+          
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            Vue.createApp (
+                {
+                    data: function() {
+                        return {
+                            greeting: 'hello world vue',
+                            guess: ' one',
+                            isVisible: true
+                        }
+                    },
+                    methods: {
+
+                    }
+                }).mount('#app')
+        </script>
+    </body>
+
+
+
+</html>
