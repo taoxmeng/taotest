@@ -7,7 +7,7 @@
         $scope.name ="tao"
 
         $scope.sayHello = function () {
-            return("hello tao")
+            return("hello " + $scope.name)
         }
     });
 
