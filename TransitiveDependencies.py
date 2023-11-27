@@ -2,7 +2,11 @@ nodes = {'A': ['C', 'E', 'B', 'X'],
          'B': ['C', 'D'],
          'C': ['D','T','R'],
          'D': ['F'],
-         'F': ['G','H']
+         'E': [],
+         'F': ['G','H'],
+         'X': [],
+         'H': ['X','Z','G'],
+         'G': []
          }
 
 def find_dependencies(target, dependencies):
