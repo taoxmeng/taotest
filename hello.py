@@ -16,7 +16,6 @@ def find_dependencies(target, dependencies):
                     if node not in dependencies: 
                         dependencies = dependencies + [node]
         return dependencies
-    
 
 
 print (find_dependencies('A',[]))
